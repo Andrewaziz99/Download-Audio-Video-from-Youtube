@@ -1,4 +1,6 @@
 # Download-Audio-Video-from-Youtube
+In this Python script I used pytube library to get the functions which will help me to download Audio or video from Youtube.
+
 1. First you should download python (any version), then open cmd as an adminstrator then write "pip install pytube".
 2. Right-Click on Desktop.
 3. Select "Open in Windows Terminal" OR Tap on Start and write "cmd" ----> Open it normally not as an Adminstrator.
