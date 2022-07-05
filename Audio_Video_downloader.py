@@ -42,20 +42,6 @@ else:
 
         outloc = input('\nEnter the download path: ')
 
-        # filters = Video.streams.filter(progressive=True, file_extension='mp4').get_by_itag(22)
-
-        # download the highest quality video
-        # filters.get_highest_resolution().download(outloc)
-
-        # stream = Video.streams.first()
-        # stream.download()
-
-        # out_file = Video.streams.get_highest_resolution()
-        # print(f'Found stream:\nNAME: {out_file.title}\nRES: {out_file.resolution}\nFPS: {out_file.fps}\nTYPE: {out_file.subtype}')
-        # print('Starting to download, please wait...')
-        # r = out_file.download()
-        # print('File saved: ', r)
-
         out_file = Video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution')[-1].download(outloc)
 
         base, ext = os.path.splitext(out_file)
